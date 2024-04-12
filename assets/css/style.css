@@ -1,0 +1,383 @@
+@import url('https://fonts.googleapis.com/css2?family=Abyssinica+SIL&family=Alata&family=Josefin+Sans:wght@300&display=swap');
+
+
+@font-face {
+  font-family: 'Abyssinica SIL', serif;
+  src: url(../fonts/Abyssinica_SIL/AbyssinicaSIL-Regular.ttf);
+}
+
+
+/* L'étoile donne du style à TOUS les éléments */
+/* * {
+  margin: 0;
+  padding: 0;
+  border: 2px solid red;
+} */
+
+body {
+  font-family: 'roboto', sans-serif;
+  background-color: antiquewhite
+  /* VH = 100% de la taille de l'écran (viewport height) */
+  /* min-height: 100vh; */
+}
+
+
+h1 {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-align: center;
+  /* Les tailles de polices doivent être en REM */
+  font-size: 3.5rem;
+  font-weight: 300;
+  text-shadow: 3px 3px 8px #00000018;
+  color: steelblue;
+  font-family: 'roboto', sans-serif;
+}
+
+span {
+  color: #b20f0f;
+  background-color: rgba(0, 0, 0, 0.314);
+  background-size: 30px;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 3.5rem;
+}
+
+main {
+  min-height: 500px;
+  width: 90%;
+  background: rgba(129, 127, 127, 0.9);
+  /* Centrer une boite */
+  margin: 0 auto;
+  border: 2px solid rgb(48, 51, 54);
+  border-radius: 20px 20px 0 0;
+  box-shadow: 0px 0px 20px 4px #2a2e2d;
+  padding: 15px;
+}
+
+/* Sidenav menu */
+.menu.active {
+  left: 160px;
+  /* ou toute autre valeur en fonction de la largeur de votre menu */
+}
+
+.sidenav {
+  height: 100%;
+  width: 160px;
+
+  position: absolute;
+  z-index: 1;
+  top: 60px;
+
+  background-color: #e8e8e800;
+  padding-top: 60px;
+  transition: left 0.5s ease;
+}
+
+/* Sidenav menu links */
+.sidenav a {
+  padding: 23px 8px 21px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #111;
+}
+
+.sidenav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Active class */
+.sidenav.active {
+  left: 12px;
+}
+
+
+/* Close btn */
+.sidenav .close {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 35px;
+  font-size: 36px;
+}
+
+.menu {
+  --s: 25px;
+  /* control the size */
+  --c: black;
+  /* the color */
+
+  height: var(--s);
+  aspect-ratio: 1;
+  border: none;
+  padding: 0;
+  border-inline: calc(var(--s)/2) solid #0000;
+  box-sizing: content-box;
+  --_g1: linear-gradient(var(--c) 20%, #0000 0 80%, var(--c) 0) no-repeat content-box border-box;
+  --_g2: radial-gradient(circle closest-side at 50% 12.5%, var(--c) 95%, #0000) repeat-y content-box border-box;
+  background:
+    var(--_g2) left var(--_p, 0px) top,
+    var(--_g1) left calc(var(--s)/10 + var(--_p, 0px)) top,
+    var(--_g2) right var(--_p, 0px) top,
+    var(--_g1) right calc(var(--s)/10 + var(--_p, 0px)) top;
+  background-size:
+    20% 80%,
+    40% 100%;
+  position: relative;
+  clip-path: inset(0 25%);
+
+  cursor: pointer;
+  transition:
+    background-position .3s var(--_s, .3s),
+    clip-path 0s var(--_s, .6s);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.menu:before,
+.menu:after {
+  content: "";
+  position: absolute;
+  border-radius: var(--s);
+  inset: 40% 0;
+  background: var(--c);
+  transition: transform .3s calc(.3s - var(--_s, .3s));
+}
+
+.menu:checked {
+  clip-path: inset(0);
+  --_p: calc(-1*var(--s));
+  --_s: 0s;
+}
+
+.menu:checked:before {
+  transform: rotate(45deg);
+}
+
+.menu:checked:after {
+  transform: rotate(-45deg);
+}
+
+.menu:focus-visible {
+  clip-path: none;
+
+  border: none;
+  outline: 2px solid var(--c);
+  outline-offset: 5px;
+}
+
+
+
+
+
+
+h2 {
+  margin: 0;
+}
+
+.flexbox,
+.grid,
+.absolute {
+  border: 2px solid rgb(14, 52, 66);
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 20px;
+  min-height: 150px;
+}
+
+h3 {
+
+  background-color: hwb(0 7% 45% / 0.979);
+  text-align: center;
+  border-radius: 12px;
+  font-size: 30px;
+  font-weight: 400;
+}
+
+img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* FLEXBOX */
+/* Sert a répartir équitablement des éléments sur la page */
+.flexbox ul {
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.flexbox li {
+  color: azure;
+  list-style: none;
+  height: 100px;
+  width: 160px;
+  margin: 10px;
+  background: #ac0d42;
+  /* Centrer un unique élément veticalement et horizontalement */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+
+}
+
+/* GRID */
+.grid-container {
+  display: grid;
+  grid-template-columns: 30% 70%;
+}
+
+.grid img {
+  width: 80%;
+  margin: 20px auto;
+  display: block;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:
+    "i1 i2"
+    "ta ta"
+    "vi bt";
+}
+
+input,
+textarea {
+  margin: 5px;
+  border: 1px solid darkblue;
+  padding: 10px;
+  font-size: 1.1rem;
+  font-family: 'Abyssinica SIL', serif;
+
+  border-radius: 5px;
+}
+
+textarea {
+  grid-area: ta;
+  height: 40px;
+  resize: none;
+}
+
+#btn-submit {
+  grid-area: bt;
+  cursor: pointer;
+  background: teal;
+  transition: 0.2s;
+}
+
+#btn-submit:hover {
+  background: rgba(0, 128, 128, 0.425);
+  color: white;
+}
+
+/* ABSOLUTE  */
+/* Sans élément en Relative, de base, l'élément en absolute l'est par rapport au Body  */
+/* Il faut mettre une position relative au parent pour contraindre l'élément en absolute dans ses frontières  */
+.absolute {
+  position: relative;
+}
+
+
+
+#circle2 {
+  height: 40px;
+  width: 40px;
+  border-radius: 150px;
+  background: teal;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 100px;
+}
+
+.croquis-section {
+  width: 100%;
+  overflow: hidden;
+  /* Empêche le débordement des croquis hors de la section */
+}
+
+
+.croquis-container {
+  display: flex; /* Utilisez Flexbox pour aligner les images */
+  flex-wrap: wrap; /* Permettez aux éléments de s'enrouler sur plusieurs lignes */
+  justify-content: center; /* Centrez les éléments horizontalement */
+}
+
+.croquis-container img {
+  width: 30%; /* Limitez la largeur de chaque image */
+  margin: 5px; /* Ajoutez un espace entre chaque image */
+}
+
+
+#CC {
+  max-width: 50%;
+  display: block; /* Assurez-vous que l'image est affichée en tant que bloc pour pouvoir appliquer margin:auto */
+  margin: auto; /* Centre l'image horizontalement */
+}
+#AA{
+ 
+    max-width: 50%;
+    display: block; /* Assurez-vous que l'image est affichée en tant que bloc pour pouvoir appliquer margin:auto */
+    margin: auto; /* Centre l'image horizontalement */
+  }
+#BB{
+ 
+  max-width: 50%;
+  display: block; /* Assurez-vous que l'image est affichée en tant que bloc pour pouvoir appliquer margin:auto */
+  margin: auto; /* Centre l'image horizontalement */
+}
+
+/* RESPONSIVE  */
+@media screen and (max-width:1440px) {
+  .grid-container {
+    display: block;
+  }
+
+  .grid-container img {
+    width: 40%;
+  }
+}
+
+/* Styles pour les écrans de grande taille (desktops) */
+@media (min-width: 576px) {
+  body {
+    font-size: 14px;
+  }
+
+  .menu.active {
+    left: 160px;
+    /* ou toute autre valeur en fonction de la largeur de votre menu */
+  }
+
+  .flexbox ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  form {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+      "i1"
+      "i2"
+      "ta"
+      "bt";
+  }
+
+  input,
+  textarea {
+    font-size: 0.8rem;
+  }
+}

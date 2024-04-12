@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PROJET D SANSON</title>
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <script src="./assets/js/script.js" defer></script>
+  <style>
+    /* Style de base pour la navigation */
+    .sidenav {
+      height: 100%;
+      width: 0;
+      /* La navigation est initialement fermée */
+      position: fixed;
+      z-index: 1;
+      top: 60px;
+      left: 0;
+      background-color: #e8e8e8;
+      overflow-x: hidden;
+      transition: 0.5s;
+      /* Transition fluide pour l'ouverture/fermeture */
+      padding-top: 60px;
+    }
+
+    /* Style pour le texte des éléments de la navigation */
+    .sidenav ul li {
+      padding: 10px;
+      font-size: 20px;
+    }
+
+    /* Style pour les sous-menus */
+    .sidenav ul ul {
+      display: none;
+      /* Les sous-menus sont initialement cachés */
+      list-style-type: none;
+      padding-left: 20px;
+    }
+
+    /* Style pour les liens des sous-menus */
+    .sidenav ul ul li {
+      padding: 5px 0 5px 20px;
+      font-size: 16px;
+    }
+
+    /* Lorsque la classe 'active' est présente, la navigation est ouverte */
+    .sidenav.active {
+      width: 250px;
+      /* Largeur de la navigation ouverte */
+    }
+
+    /* Lorsque la navigation est ouverte, les sous-menus sont affichés */
+    .sidenav.active ul ul {
+      display: none;
+    }
+
+    /* Fermer la navigation lorsqu'on clique sur le bouton de fermeture */
+    .close {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+    }
+
+    /* Afficher le bouton de fermeture uniquement lorsque la navigation est ouverte */
+    .sidenav.active .close {
+      display: block;
+    }
+
+    .menu-toggle {
+      --s: 25px;
+      --c: rgb(156, 31, 31);
+      height: var(--s);
+      aspect-ratio: 1;
+      border: none;
+      padding: 0;
+      border-inline: calc(var(--s) / 2) solid #0000;
+      box-sizing: content-box;
+      --_g1: linear-gradient(var(--c) 20%, #0000 0 80%, var(--c) 0) no-repeat content-box border-box;
+      --_g2: radial-gradient(circle closest-side at 50% 12.5%, var(--c) 95%, #0000) repeat-y content-box border-box;
+      background: var(--_g2) left var(--_p, 0px) top, var(--_g1) left calc(var(--s) / 10 + var(--_p, 0px)) top, var(--_g2) right var(--_p, 0px) top, var(--_g1) right calc(var(--s) / 10 + var(--_p, 0px)) top;
+      background-size: 20% 80%, 40% 100%;
+      position: relative;
+      clip-path: inset(0 25%);
+      cursor: pointer;
+      transition: background-position .3s var(--_s, .3s), clip-path 0s var(--_s, .6s);
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <header>
+    <div>
+      <div class="burger">
+        <input type="checkbox" class="menu">
+        <!-- Ajout du bouton de menu -->
+        <input type="checkbox" id="menu-toggle" role="button" aria-label="Display the menu" class="menu-toggle">
+        <a id="closeBtn" href="#" class="close">×</a>
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+        <!-- Fin du bouton de menu -->
+      </div>
+    </div>
+    <h1><span>D</span>mesure</h1>
+
+
+    <div><img src="./assets/css/pollymagoo.svg" alt=""></div>
+  </header>
+
+  <main>
+    <nav>
+      <div class="flexbox">
+        <div class="flexbox">
+          <img src="./assets/img/ppdjs26.png" alt="banner" />
+        </div>
+        <div id="mySidenav" class="sidenav">
+
+          <ul>
+            <li id="menu0">Story telling
+              <ul class="hide">
+                <li><a href="#">Sous-menu 1</a></li>
+                <li><a href="#">Sous-menu 2</a></li>
+              </ul>
+            </li>
+            <li id="menu1">Mes valeurs
+              <ul class="hide">
+                <li><a href="#">Sous-menu 1</a></li>
+                <li><a href="#">Sous-menu 2</a></li>
+              </ul>
+            </li>
+            <li id="menu2">Typologie produits
+              <ul class="hide">
+                <li><a href="#">Sous-menu 1</a></li>
+                <li><a href="#">Sous-menu 2</a></li>
+              </ul>
+            </li>
+            <li id="menu3">contactez=moi</li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+
+
+
+    </div>
+    <div><img src="./assets/css/TFSMDM.png" alt="image intro"></div>
+    <div class="story telling">
+      <a href="story telling">
+        <h3>story telling</h3>
+      </a>
+    </div>
+    <div class="imgst"><img src="./assets/img/djs4.png" alt="" /> </div>
+
+
+    <div class="mes valeurs">
+      <a href="mes valeurs">
+        <h3>mes valeurs</h3>
+      </a>
+      <img src="./assets/img/djs61.png" alt="topo valeurs" />
+    </div>
+
+    <div class="typologie produits">
+      <a href="Typologie produits">
+        <h3>Typologie produits</h3>
+      </a>
+      <img src="./assets/img/djs33.png" alt="produits" />
+    </div>
+    <div class="customize">
+      <a href="customize">
+        <h3>customize</h3>
+      </a>
+      <img src="./assets/img/ppdjs28.png" alt="personalisation" />
+    </div>
+    <div class="persona">
+
+      <a href="persona">
+        <h3><span>D</span>
+          mesure <br />
+          Notre persona
+        </h3>
+      </a>
+      <img src="./assets/img/dietrich.png" alt="M Dietrich" />
+      <p>
+        Dmesure la symbolise
+        Ses possibilités
+        Sont sans mesure,
+        Ses transformations multiples
+        Son image , jamais diffuse
+        elle évolue sans cesse ,
+        Passe du volume d’excentricité
+        A la force de la sagesse
+        Artiste en affaires
+        D’un naturel confondant
+        Sous le masque des médias,
+        Elle garde sa clarté
+        Elle est pure et réservée .
+        Si on la croise alors
+        On s’en souvient…</p>
+
+
+    </div>
+    <img src="./assets/img/ppdjs33.png" alt="portrait lady gaga" />
+    </div>
+    <div class="cible">
+      <a href="cible">
+        <h3>notre coeur de cible</h3>
+      </a>
+      <p>Une femme épanouie ,indépendante
+        Féminine ,elle symbolise l’élégance ,d’une allure naturelle et forte ,
+        Elle capte le regard par sa présence ,son charisme ,
+        Elle est intuitive, imaginative , inspirante et inspirée ,
+        Elle porte son énergie créatrice ,sans limite .</p>
+      <img src="./assets/img/ppdjs9.png" alt="imagecible " /><img src="./assets/img/ppdjs26.png" alt="#logo" />
+      <div class="Notre clientèle cible">
+
+        <a href="Notre clientèle cible">
+          <h3>Notre clientèle cible</h3>
+        </a>
+        <img src="./assets/img/hc.png" alt="clientèle" />
+      </div>
+      <div class="mots-cles">
+        <a href="mots-cles">
+          <h3>mots-cles</h3>
+        </a>
+        <p>Fabrication française
+          Elégance
+          Authenticité
+          Plénitude
+        </p>
+        <p>Personnalisation
+          Unique
+          Style</p>
+
+        <p>Féminité
+          audace
+          Force
+          harmonie</p>
+      </div>
+      <div class="gallery">
+        <a href="gallery">
+          <h3>Gallery</h3>
+        </a>
+
+        <p>Chaleur/ fraicheur
+          Couleurs/soyeux/
+          Structurée/taillée</p>
+        <p>Architecturale
+          Fluidité/
+          lumière</p>
+        <div id="cards">
+          <img src="./assets/img/Architecturale.png" alt=""><img src="./assets/img/Eclosion.png" alt=""><img src="./assets/img/Elegance.png" alt=""><img src="./assets/img/Organique.png" alt="">
+        </div>
+      </div>
+      <h2>Croquis</h2>
+      <div id="CC"><img src="/assets/img/CC.png" alt=""></div>
+      <section class="croquis-section">
+        <div class="croquis-container">
+          <!-- Les balises img seront générées dynamiquement par JavaScript -->
+        </div>
+      
+      </section>
+      <div id="AA"><img src="/assets/img/AA.png" alt=""></div>
+      <div class="grid">
+        <a href="me contacter">
+          <h3>Me contacter</h3>
+        </a>
+        <div class="grid-container">
+          <img src="./assets/img/fer-acajou.svg" alt="logo" />
+
+          <form action="">
+            <input type="text" id="firstname" placeholder="Prénom" />
+            <input type="text" id="surname" placeholder="Nom" />
+            <textarea cols="30" rows="10" placeholder="Ici votre message"></textarea>
+            <input type="submit" value="Valider" id="btn-submit" />
+          </form>
+        </div>
+      </div>
+
+      <div class="absolute">
+        <div><span id="circle2"></span></div>
+        <h2><span>D</span>
+          mesure</h2>
+        <span id="banner"></span><img src="./assets/img/ppdjs26.png" alt="bannière" /><img
+          src="./assets/img/ppdjs14.png" alt="charte graphique">
+        <div class="imgbanner">
+          <img src="./assets/img/ppdjs16.png" alt="" />
+        </div>
+      </div>
+  </main>
+  <footer>
+    <div class="footer logo">
+      <img src="./assets/img/ppdjs26.png" alt="logo fin" />
+
+    </div>
+  </footer>
+  <div id="BB"><img src="/assets/img/BB.png" alt=""></div>
+ 
+
+</body>
+
+
+</html>
