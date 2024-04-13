@@ -8,39 +8,42 @@
 
 
 /* L'étoile donne du style à TOUS les éléments */
-/* * {
+ * {
   margin: 0;
   padding: 0;
-  border: 2px solid red;
-} */
+ 
+} 
 
 body {
   font-family: 'roboto', sans-serif;
-  background-color: antiquewhite
+  background-color: bisque
   /* VH = 100% de la taille de l'écran (viewport height) */
   /* min-height: 100vh; */
 }
-
+#mesure{
+  background-color: #ac0d42;
+}
 
 h1 {
   text-transform: uppercase;
+  
   letter-spacing: 3px;
   text-align: center;
   /* Les tailles de polices doivent être en REM */
-  font-size: 3.5rem;
+  font-size: 3rem;
   font-weight: 300;
   text-shadow: 3px 3px 8px #00000018;
-  color: steelblue;
+  color: antiquewhite;
   font-family: 'roboto', sans-serif;
 }
 
 span {
   color: #b20f0f;
-  background-color: rgba(0, 0, 0, 0.314);
+  background-color: rgba(0, 0, 0, 0.919);
   background-size: 30px;
   font-style: italic;
   font-weight: 400;
-  font-size: 3.5rem;
+  font-size: 2.5rem;
 }
 
 main {
@@ -109,12 +112,10 @@ main {
   font-size: 36px;
 }
 
-.menu {
-  --s: 25px;
-  /* control the size */
-  --c: black;
-  /* the color */
-
+/* Votre CSS existant pour le bouton hamburger */
+.menu-icon {
+  --s: 25px; /* control the size */
+  --c: black; /* the color */
   height: var(--s);
   aspect-ratio: 1;
   border: none;
@@ -133,7 +134,6 @@ main {
     40% 100%;
   position: relative;
   clip-path: inset(0 25%);
-
   cursor: pointer;
   transition:
     background-position .3s var(--_s, .3s),
@@ -169,11 +169,11 @@ main {
 
 .menu:focus-visible {
   clip-path: none;
-
   border: none;
   outline: 2px solid var(--c);
   outline-offset: 5px;
 }
+
 
 
 
@@ -199,13 +199,57 @@ h3 {
   background-color: hwb(0 7% 45% / 0.979);
   text-align: center;
   border-radius: 12px;
-  font-size: 30px;
-  font-weight: 400;
+  font-size: 24px;
+  font-weight: 300;
+  color: antiquewhite;
 }
 
 img {
   width: 100%;
   border-radius: 10px;
+}
+
+#story-telling .imgst img {
+  max-width: 20%;
+
+}
+
+
+#typologie-produits .imgst img {
+  max-width: 20%;
+  margin-left: 40%;
+  margin-right: 50%;
+}
+
+
+#customise .imgst img {
+  max-width: 20%;
+  margin-left: 40%;
+  margin-right: 50%;
+}
+
+#persona .imgst img {
+  max-width: 20%;
+  margin-left: 40%;
+}
+
+#cible .imgst img {
+  max-width: 20%;
+}
+#ldg .imgst img {
+  max-width: 60%;
+  margin-left: 20%;
+
+}
+#clientèle-cible .imgst img {
+  max-width: 20%;
+  margin-left: 40%;
+
+}
+#cards1 img {
+  max-width: 50%; /* ajustez cette valeur selon vos besoins */
+  margin-left: 25%;
+  margin-bottom: 20px; /* Ajoute une marge en bas de chaque image */
 }
 
 /* FLEXBOX */
@@ -310,34 +354,163 @@ textarea {
 
 
 .croquis-container {
-  display: flex; /* Utilisez Flexbox pour aligner les images */
-  flex-wrap: wrap; /* Permettez aux éléments de s'enrouler sur plusieurs lignes */
-  justify-content: center; /* Centrez les éléments horizontalement */
+  display: flex;
+  /* Utilisez Flexbox pour aligner les images */
+  flex-wrap: wrap;
+  /* Permettez aux éléments de s'enrouler sur plusieurs lignes */
+  justify-content: center;
+  /* Centrez les éléments horizontalement */
 }
 
 .croquis-container img {
-  width: 30%; /* Limitez la largeur de chaque image */
-  margin: 5px; /* Ajoutez un espace entre chaque image */
+  width: 30%;
+  /* Limitez la largeur de chaque image */
+  margin: 5px;
+  /* Ajoutez un espace entre chaque image */
 }
 
 
 #CC {
   max-width: 50%;
-  display: block; /* Assurez-vous que l'image est affichée en tant que bloc pour pouvoir appliquer margin:auto */
-  margin: auto; /* Centre l'image horizontalement */
+  display: block;
+  /* Assurez-vous que l'image est affichée en tant que bloc pour pouvoir appliquer margin:auto */
+  margin: auto;
+  /* Centre l'image horizontalement */
 }
-#AA{
- 
-    max-width: 50%;
-    display: block; /* Assurez-vous que l'image est affichée en tant que bloc pour pouvoir appliquer margin:auto */
-    margin: auto; /* Centre l'image horizontalement */
-  }
-#BB{
- 
+
+#AA {
+
   max-width: 50%;
-  display: block; /* Assurez-vous que l'image est affichée en tant que bloc pour pouvoir appliquer margin:auto */
-  margin: auto; /* Centre l'image horizontalement */
+  display: block;
+  /* Assurez-vous que l'image est affichée en tant que bloc pour pouvoir appliquer margin:auto */
+  margin: auto;
+  /* Centre l'image horizontalement */
 }
+
+#BB {
+
+  max-width: 50%;
+  display: block;
+  /* Assurez-vous que l'image est affichée en tant que bloc pour pouvoir appliquer margin:auto */
+  margin: auto;
+  /* Centre l'image horizontalement */
+
+}
+
+#fin {
+  display: flex;
+  align-items: center;
+  /* Centrer verticalement */
+}
+
+#fin img {
+  margin-right: 10px;
+  /* Marge à droite pour séparer l'image des icônes */
+}
+
+.social {
+  margin-left: auto;
+  /* Déplace les icônes à droite */
+}
+
+.social-icon {
+  margin-right: 10px;
+  /* Espacement entre les icônes */
+  font-size: 14px;
+  /* Augmente la taille des icônes */
+  color: antiquewhite;
+
+}
+
+.fas {
+  display: flex;
+  align-items: center;
+  margin-right: 7px;
+
+  color: antiquewhite;
+}
+
+.fas h3 {
+  font-family: 'roboto', sans-serif;
+  font-size: 1rem;
+  margin-right: 10px;
+}
+
+
+
+nav {
+  width: 100%;
+  margin: 0 auto;
+  background-color: teal;
+  position: sticky;
+  top: 0px;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+nav ul li {
+  float: left;
+  width: 25%;
+  text-align: center;
+  position: relative;
+}
+
+nav ul::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+nav a {
+  display: block;
+  text-decoration: none;
+  color: antiquewhite;
+  border-bottom: 2px solid transparent;
+  padding: 10px 0px;
+}
+
+nav a:hover {
+  color: orange;
+  border-bottom: 2px solid gold;
+}
+
+.sous {
+  display: none;
+  box-shadow: 0px 1px 2px #914646;
+  background-color: teal;
+  position: absolute;
+  width: 100%;
+  z-index: 1000;
+}
+
+nav>ul li:hover .sous {
+  display: block;
+}
+
+.sous li {
+  float: none;
+  width: 100%;
+  text-align: left;
+}
+
+.sous a {
+  padding: 10px;
+  border-bottom: none;
+}
+
+.sous a:hover {
+  border-bottom: none;
+  background-color: RGBa(200, 200, 200, 0.1);
+}
+
+.deroulant>a::after {
+  content: " ▼";
+  font-size: 12px;
+}
+
+
 
 /* RESPONSIVE  */
 @media screen and (max-width:1440px) {
@@ -380,4 +553,5 @@ textarea {
   textarea {
     font-size: 0.8rem;
   }
+  
 }

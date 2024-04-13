@@ -1,37 +1,7 @@
-const menus = [menu0, menu1, menu2]; // Regroupez tous les menus dans un tableau
-
-// Ajoutez un écouteur d'événements à chaque menu
-menus.forEach((menu, index) => {
-    menu.addEventListener("click", function () {
-        console.log("click menu" + index);
-
-        // Masquer tous les sous-menus
-        menus.forEach(otherMenu => {
-            const ul = otherMenu.querySelector("ul");
-            ul.classList.remove("show");
-            ul.classList.add("hide");
-        });
-
-        const ul = menu.querySelector("ul");
-        if (ul.classList.contains("show")) {
-            // Masquer le sous-menu actuel
-            ul.classList.remove("show");
-            ul.classList.add("hide");
-        } else {
-            // Afficher le sous-menu actuel
-            ul.classList.add("show");
-            ul.classList.remove("hide");
-        }
-    });
-});
 
 
-const menuToggle = document.getElementById('menu-toggle'); // Sélectionnez la case à cocher du menu
 
-menuToggle.addEventListener('change', function () {
-    const sidenav = document.querySelector('.sidenav'); // Sélectionnez le menu latéral
-    sidenav.classList.toggle('active'); // Ajoutez ou supprimez la classe 'active' pour afficher ou masquer le menu latéral
-});
+
 
 const croquisContainer = document.querySelector('.croquis-container');
 
@@ -44,10 +14,7 @@ img.alt = `Croquis ${i}`; // Alt texte pour décrire l'image
   croquisContainer.appendChild(img);
 }
 
-
-
-
-
+  
 
 
 
