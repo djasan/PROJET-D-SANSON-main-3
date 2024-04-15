@@ -1,32 +1,352 @@
-@import url('https://fonts.googleapis.com/css2?family=Abyssinica+SIL&family=Alata&family=Josefin+Sans:wght@300&display=swap');
-
+@import url('https://fonts.googleapis.com/css?family=Roboto-Light:400,700,900');
 
 @font-face {
-  font-family: 'Abyssinica SIL', serif;
-  src: url(../fonts/Abyssinica_SIL/AbyssinicaSIL-Regular.ttf);
+  font-family: 'roboto', sans-serif;
+  src: url('../fonts/roboto/Roboto-Light.ttf');
 }
 
 
 /* L'étoile donne du style à TOUS les éléments */
- * {
+* {
   margin: 0;
   padding: 0;
- 
-} 
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   font-family: 'roboto', sans-serif;
-  background-color: bisque
+  background-color: #ac0d42;
+  margin: 0;
+  padding: 0;
   /* VH = 100% de la taille de l'écran (viewport height) */
   /* min-height: 100vh; */
 }
-#mesure{
+
+#slider {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+
+.slider-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.prev-arrow,
+.next-arrow {
+  font-size: 2em;
+  color: white;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.prev-arrow {
+  left: 20px;
+}
+
+.next-arrow {
+  right: 20px;
+}
+
+.slider-image {
+  max-width: 80%;
+  margin: auto;
+  display: block;
+}
+
+.close-slider {
+  color: white;
+  font-size: 2em;
+  position: absolute;
+  top: 40px;
+  right: 20px;
+  z-index: 100;
+  cursor: pointer;
+}
+
+img {
+  width: 100%;
+  vertical-align: bottom;
+}
+
+.navigation.scrolled {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.178);
+}
+
+#home {
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.493);
+  font-size: 1.5rem;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 0.01vh;
+  padding: 10px 20px;
+  z-index: 10;
+  width: 100%;
+}
+
+.menu-relative {
+  display: none;
+}
+
+#navbar {
+  position: relative;
+}
+
+body.menu-open {
+  overflow: hidden;
+}
+
+.paralax1 {
+  width: 100%;
+}
+
+#menuburger {
+  width: 20px;
+  cursor: pointer;
+  z-index: 100;
+  user-select: none;
+}
+
+#menu {
+  position: absolute;
+  top: 0%;
+  left: -100%;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(37, 37, 37, 0.877);
+  z-index: 10;
+  display: block;
+  transition: left 0.6s ease-in-out;
+}
+
+#menu ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+#search {
+  display: none;
+  cursor: pointer;
+}
+
+#menu .sous {
+  background-color: teal;
+}
+
+#menu>ul>li {
+  background-color: transparent;
+}
+
+#menu li {
+  margin: 0;
+  padding: 8px 0;
+  text-align: center;
+  color: white;
+  width: 100%;
+}
+
+#menu a:hover {
+  background-color: rgba(0, 0, 0, 0.493);
+  cursor: pointer;
+}
+
+#h1-home {
+  font-size: 1.4rem;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: auto;
+  background-color: rgb(58, 58, 58);
+  padding: 15px 20px;
+  letter-spacing: 10px;
+}
+
+.home-icon {
+  width: 20px;
+  margin-right: 10px;
+}
+
+.home-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.center {
+  text-align: center;
+  color: rgba(0, 0, 0, 0.493);
+}
+
+#h2-about {
+  font-size: 1.8rem;
+  margin: 3rem 0px 1rem 0px;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.about-me {
+  display: none;
+}
+
+#slider-text {
+  position: absolute;
+  z-index: 100;
+  color: white;
+  bottom: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#p-about {
+  margin-bottom: 1rem;
+  font-style: italic;
+  font-size: 1.1rem;
+}
+
+#p-about2 {
+  font-size: 1.1rem;
+  margin: 10px;
+  line-height: 1.8rem;
+}
+
+#h3-work {
+  font-size: 1.2rem;
+  margin: 3rem 0px 1rem 0px;
+  font-weight: 400;
+  margin-bottom: 3rem;
+}
+
+.skills {
+  margin-left: 3%;
+}
+
+.skill-text {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.skill-text p {
+  margin-left: 10px;
+  font-size: 1rem;
+  letter-spacing: 9px;
+}
+
+.logo-skill {
+  width: 20px;
+  margin-right: 10px;
+  margin-left: 5px;
+}
+
+.skill-bar {
+  width: 100%;
+  height: 35px;
+  background-color: rgba(209, 209, 209, 0.801);
+  margin-bottom: 2rem;
+}
+
+#bar1 {
+  position: relative;
+  width: 90%;
+  background-color: rgba(0, 0, 0, 0.493);
+  height: 38px;
+}
+
+#grid2 {
+  display: grid;
+  position: absolute;
+  top: 5.3vh;
+  height: 0vh;
+  overflow: hidden;
+  grid-template-columns: 4fr 4fr 4fr 4fr;
+  width: 40%;
+  background-color: rgb(211, 211, 211);
+  border-radius: 8px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+.grid2-show {
+  padding: 10px !important;
+  height: auto !important;
+  position: absolute !important;
+}
+
+#grid2 img {
+  width: 100%;
+}
+
+#bar1-text {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+#bar2 {
+  position: relative;
+  width: 85%;
+  background-color: rgba(0, 0, 0, 0.493);
+  height: 38px;
+}
+
+#bar2-text {
+  position: absolute;
+  left: 45%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+#bar3 {
+  position: relative;
+  width: 75%;
+  background-color: rgba(0, 0, 0, 0.493);
+  height: 38px;
+}
+
+#mesure {
   background-color: #ac0d42;
 }
 
 h1 {
   text-transform: uppercase;
-  
+
   letter-spacing: 3px;
   text-align: center;
   /* Les tailles de polices doivent être en REM */
@@ -58,121 +378,6 @@ main {
   padding: 15px;
 }
 
-/* Sidenav menu */
-.menu.active {
-  left: 160px;
-  /* ou toute autre valeur en fonction de la largeur de votre menu */
-}
-
-.sidenav {
-  height: 100%;
-  width: 160px;
-
-  position: absolute;
-  z-index: 1;
-  top: 60px;
-
-  background-color: #e8e8e800;
-  padding-top: 60px;
-  transition: left 0.5s ease;
-}
-
-/* Sidenav menu links */
-.sidenav a {
-  padding: 23px 8px 21px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
-}
-
-.sidenav a:hover {
-  color: #111;
-}
-
-.sidenav ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-/* Active class */
-.sidenav.active {
-  left: 12px;
-}
-
-
-/* Close btn */
-.sidenav .close {
-  display: none;
-  position: absolute;
-  top: 0;
-  right: 35px;
-  font-size: 36px;
-}
-
-/* Votre CSS existant pour le bouton hamburger */
-.menu-icon {
-  --s: 25px; /* control the size */
-  --c: black; /* the color */
-  height: var(--s);
-  aspect-ratio: 1;
-  border: none;
-  padding: 0;
-  border-inline: calc(var(--s)/2) solid #0000;
-  box-sizing: content-box;
-  --_g1: linear-gradient(var(--c) 20%, #0000 0 80%, var(--c) 0) no-repeat content-box border-box;
-  --_g2: radial-gradient(circle closest-side at 50% 12.5%, var(--c) 95%, #0000) repeat-y content-box border-box;
-  background:
-    var(--_g2) left var(--_p, 0px) top,
-    var(--_g1) left calc(var(--s)/10 + var(--_p, 0px)) top,
-    var(--_g2) right var(--_p, 0px) top,
-    var(--_g1) right calc(var(--s)/10 + var(--_p, 0px)) top;
-  background-size:
-    20% 80%,
-    40% 100%;
-  position: relative;
-  clip-path: inset(0 25%);
-  cursor: pointer;
-  transition:
-    background-position .3s var(--_s, .3s),
-    clip-path 0s var(--_s, .6s);
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.menu:before,
-.menu:after {
-  content: "";
-  position: absolute;
-  border-radius: var(--s);
-  inset: 40% 0;
-  background: var(--c);
-  transition: transform .3s calc(.3s - var(--_s, .3s));
-}
-
-.menu:checked {
-  clip-path: inset(0);
-  --_p: calc(-1*var(--s));
-  --_s: 0s;
-}
-
-.menu:checked:before {
-  transform: rotate(45deg);
-}
-
-.menu:checked:after {
-  transform: rotate(-45deg);
-}
-
-.menu:focus-visible {
-  clip-path: none;
-  border: none;
-  outline: 2px solid var(--c);
-  outline-offset: 5px;
-}
 
 
 
@@ -209,10 +414,50 @@ img {
   border-radius: 10px;
 }
 
+#polly {
+  border: 5px solid black;
+  max-width: 100%;
+  margin-left: 30%;
+  margin-right: 30%;
+  background-color: hwb(0 7% 45% / 0.979);
+}
+
 #story-telling .imgst img {
-  max-width: 20%;
+  display: block;
+  width: 20%; /* Ajustez la largeur selon vos besoins */
+  margin: 0 auto; /* Cela centrera l'image horizontalement à l'intérieur de son conteneur */
+}
+
+#p-about2{
+  white-space: pre-line; /* Conserve les sauts de ligne */
+ 
+}
+
+#charte-graphique{
+  width: 20%; /* Ajustez la largeur selon vos besoins */
+  margin:5px ;
+  margin-left: 40%;
+  margin-right: 30%;
+
 
 }
+/* Styles spécifiques pour le texte */
+#story-telling .imgst p {
+  flex: 1;
+  /* Le texte prendra tout l'espace disponible à droite de l'image */
+  padding-left: 20px;
+  /* Ajout d'un espace à gauche du texte */
+  text-align: justify;
+  /* Justifie le texte */
+  font-weight: 300;
+  font-size: 16px;
+  font-family: 'roboto'sans-serif;
+  color:black;
+}
+
+
+/* Styles spécifiques pour l'image */
+
 
 
 #typologie-produits .imgst img {
@@ -236,20 +481,30 @@ img {
 #cible .imgst img {
   max-width: 20%;
 }
+
+#gallery img {
+  max-width: 60%;
+
+}
+
 #ldg .imgst img {
   max-width: 60%;
   margin-left: 20%;
 
 }
+
 #clientèle-cible .imgst img {
   max-width: 20%;
   margin-left: 40%;
 
 }
+
 #cards1 img {
-  max-width: 50%; /* ajustez cette valeur selon vos besoins */
+  max-width: 50%;
+  /* ajustez cette valeur selon vos besoins */
   margin-left: 25%;
-  margin-bottom: 20px; /* Ajoute une marge en bas de chaque image */
+  margin-bottom: 20px;
+  /* Ajoute une marge en bas de chaque image */
 }
 
 /* FLEXBOX */
@@ -468,21 +723,26 @@ nav a {
   text-decoration: none;
   color: antiquewhite;
   border-bottom: 2px solid transparent;
-  padding: 10px 0px;
+  padding: 8px;
+
 }
 
 nav a:hover {
   color: orange;
-  border-bottom: 2px solid gold;
+  border-bottom: 2px solid orange;
+  ;
 }
 
 .sous {
   display: none;
+ 
+  padding: 8px;
   box-shadow: 0px 1px 2px #914646;
   background-color: teal;
   position: absolute;
   width: 100%;
   z-index: 1000;
+
 }
 
 nav>ul li:hover .sous {
@@ -496,6 +756,7 @@ nav>ul li:hover .sous {
 }
 
 .sous a {
+  margin: 10px;
   padding: 10px;
   border-bottom: none;
 }
@@ -530,12 +791,13 @@ nav>ul li:hover .sous {
   }
 
   .menu.active {
-    left: 160px;
+    left: 10px;
     /* ou toute autre valeur en fonction de la largeur de votre menu */
   }
 
   .flexbox ul {
     flex-direction: column;
+    justify-content: center;
     align-items: center;
   }
 
@@ -553,5 +815,5 @@ nav>ul li:hover .sous {
   textarea {
     font-size: 0.8rem;
   }
-  
+
 }

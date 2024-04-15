@@ -5,97 +5,169 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>PROJET D SANSON</title>
+  <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     integrity="sha512-<votre-clé-d'intégrité>" crossorigin="anonymous" />
 
   <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="stylesheet" href="./assets/css/menu.css">
+  <link rel="stylesheet" href="./assets/css/style1.css">
+
   <script src="./assets/js/script.js" defer></script>
-  
+  <script src="./assets/js/script1.js" defer></script>
 </head>
 
 <body>
 
-
-  <header>
   <div id="mesure">
     <h1><span>D</span>mesure</h1>
   </div>
+  <img class="thumbnail" id="parallax1" src="./assets/img/parallax1.svg" alt="Parallax1">
+  <header>
+    <nav id="navbar">
+
+      <div class="navigation">
+        <p id="home">Home</p>
+        <div id="slider-overlay" class="slider-overlay">
+          <span class="close-slider" id="close-slider">&times;</span>
+          <div id="slider">
+            <div class="prev-arrow" id="prev-arrow">&#10094;</div>
+            <img id="slider-image" class="slider-image" src="" alt="Slider Image">
+            <div class="next-arrow" id="next-arrow">&#10095;</div>
+          </div>
+          <p id="slider-text"></p>
+        </div>
+        <div class="menu-relative">
+          <ul id="menu-desktop">
+            <li>
+              <a class="home-icons" href="#h2-about">
+                <img class="home-icon" src="./assets/img/A.png" alt="Icon">About
+              </a>
+            </li>
+            <li id="gallery1">
+              <div class="home-icons">
+                <img class="home-icon" src="./assets/img/grip-solid.svg" alt="Icon">Portfolio
+                <div class="gallery1">
+                  <div id="grid2">
+                    <!-- Ajoutez vos images ici -->
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <a class="home-icons" href="#h2-contact">
+                <img class="home-icon" src="./assets/img/envelope-solid.svg" alt="Icon">Contact
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div id="menu">
+          <ul>
+            <li class="deroulant">
+              <a href="#me-contacter">Contactez-moi</a>
+            </li>
+            <li class="deroulant">
+              <a href="#mes-valeurs">Mes valeurs &ensp;</a>
+              <ul class="sous">
+                <li><a href="#mots-cles">Mots-clés</a></li>
+                <li><a href="#customise">Promesse consommateur et justification</a></li>
+              </ul>
+            </li>
+            <li class="deroulant">
+              <a href="#typologie-produits">Typologie produits &ensp;</a>
+              <ul class="sous">
+                <li><a href="#cible">Notre coeur de cible</a></li>
+                <li><a href="#persona">Notre persona</a></li>
+                <li><a href="#clientèle-cible">Notre clientèle cible</a></li>
+              </ul>
+            </li>
+            <li class="deroulant">
+              <a href="#story-telling">Story telling &ensp;</a>
+              <ul class="sous">
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#croquis">Croquis</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <img id="search" src="./assets/img/magnifying-glass-solid.svg" alt="Search">
+        <img id="menuburger" src="./assets/img/bars-solid.svg" alt="Menu Burger">
+      </div>
+    </nav>
     <nav>
-   
+
 
       <ul>
-        <li class="deroulant"><a href="#story-telling">Story telling &ensp;</a>
-          <ul class="sous">
-            <li><a href="#gallery">Gallery</a></li>
-            <li><a href="#croquis">Croquis</a></li>
-          </ul>
+        <li class="deroulant">
+          <a href="#me-contacter">Contactez-moi</a>
         </li>
-        <li class="deroulant"><a href="#mes-valeurs">Mes valeurs &ensp;</a>
+        <li class="deroulant">
+          <a href="#mes-valeurs">Mes valeurs &ensp;</a>
           <ul class="sous">
             <li><a href="#mots-cles">Mots-clés</a></li>
             <li><a href="#customise">Promesse consommateur et justification</a></li>
           </ul>
         </li>
-        <li class="deroulant"><a href="#typologie-produits">Typologie produits &ensp;</a>
+        <li class="deroulant">
+          <a href="#typologie-produits">Typologie produits &ensp;</a>
           <ul class="sous">
             <li><a href="#cible">Notre coeur de cible</a></li>
             <li><a href="#persona">Notre persona</a></li>
             <li><a href="#clientèle-cible">Notre clientèle cible</a></li>
-
           </ul>
-        <li class="deroulant"><a href="#me-contacter">Contactez-moi</a></li>
-
         </li>
-
+        <li class="deroulant">
+          <a href="#story-telling">Story telling &ensp;</a>
+          <ul class="sous">
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#croquis">Croquis</a></li>
+          </ul>
+        </li>
       </ul>
     </nav>
-    <div><img src="./assets/css/pollymagoo.svg" alt=""></div>
   </header>
 
+
   <main>
-   
+
+    <div id="polly">
+      <div class="imgst"> <img src="./assets/css/pollymagoo.svg" alt=""></div>
+    </div>
 
 
-
-
-
-
+    <!-- Votre contenu principal -->
     <div class="flexbox">
+      <!-- Contenu de votre flexbox -->
       <h3>Le tailleur Femme / Mesure</h3>
       <div><img src="./assets/css/TFSMDM.png" alt="image intro"></div>
       <section id="story-telling">
         <a href="#story-telling"></a>
-        <h3>&infin; Story telling</h3>
-        <div class="imgst"><img src="./assets/img/processus.png" alt="processus" /></div>
-        <p>J'ai choisi le symbole &infin; de l'infini.
-          Car les mathématiques sont importantes dans ma vie,
-          paradoxalement et profondément liées,
-          parallèles à ma passion du vêtement.
-          La création est à l'infini.
-          En effet, point de création sans construction,
-          sans code, ou sans calcul.
-          Passionnée par les mathématiques,
-          je tentais d’abord d'intégrer,
-          tour à tour les beaux arts,
-          puis l'école supérieure de l'architecture;
-          je voulais créer au quotidien,
-          sans m'enfermer, quelque chose de plaisant
-          et de personnel sans m'enfermer.
-          Un style, créer un style de vêtements.
-          Mon choix fût instantanément celui du
-          tailleur pour femme,
-          pas juste le smoking,
-          le tailleur sous toutes ses coupes et ses formes.
-          Valorisant, il est aussi le plus unisexe,
-          parfaitement porté et par la femme et par l'homme,
-          en toute complémentarité.
-          J'avais besoin de création et de construction,
-          ma logique est respectée</p>
+
+        <h2 id="h2-about" class="center">ABOUT ME</h2>
+        <p id="p-about" class="center">&infin; Story telling</p>
+
+        <div class="imgst">
+          <div class="content">
+            <img src="./assets/img/processus.png" alt="processus" />
+            <p id="p-about2" class="center"><i> "J'ai choisi le symbole &infin; de l'infini, car les mathématiques sont
+                importantes dans ma vie, paradoxalement et profondément liées, parallèles à ma passion du vêtement. La
+                création est à l'infini. En effet, point de création sans construction, sans code, ou sans calcul.
+                Passionnée par les mathématiques, je tentais d’abord d'intégrer, tour à tour les beaux arts, puis
+                l'école supérieure de l'architecture; je voulais créer au quotidien, sans m'enfermer, quelque chose de
+                plaisant et de personnel sans m'enfermer. Un style, créer un style de vêtements. Mon choix fût
+                instantanément celui du tailleur pour femme, pas juste le smoking, le tailleur sous toutes ses coupes et
+                ses formes. Valorisant, il est aussi le plus unisexe, parfaitement porté et par la femme et par l'homme,
+                en toute complémentarité. J'avais besoin de création et de construction, ma logique est respectée."</i>
+            </p>
+          </div>
+        </div>
       </section>
+
       <section id="mes-valeurs">
         <a href="#mes-valeurs"></a>
         <h3>Mes valeurs</h3>
-        <p>Collaboration &infin;
+        <p id="p-about2" class="center">Collaboration &infin;
           Attente &infin; client
           Ecoute &infin; respect &infin;
           confiance</p>
@@ -105,7 +177,7 @@
 
         <h3>Typologie produits</h3>
 
-        <p>Dmesure proposera à sa clientèle féminine,
+        <p id="p-about2" class="center"> Dmesure proposera à sa clientèle féminine,
           une gamme de tailleurs sous toutes ses formes,
           à leur juste mesure,
           personnalisé sur demande et
@@ -127,7 +199,7 @@
         <h3>PROMESSE CONSOMMATEUR ET JUSTIFICATION</h3>
         <div class="imgst"><img src="./assets/img/customise.png" alt="personalisation" />
         </div>
-        <p>Une écoute : votre créativité
+        <p id="p-about2" class="center"> Une écoute : votre créativité
           Made in France : une garantie qualité,
           des produits conçus et confectionnés dans notre atelier.
           Une collaboration avec des fournisseurs basés en Italie ou en Angleterre.</p>
@@ -136,7 +208,7 @@
         <a href="#persona"></a>
         <h3><span>D</span> mesure <br /> Notre persona</h3>
         <div class="imgst"> <img src="./assets/img/dietrich.png" alt="M Dietrich" /> </div>
-        <p>Dmesure la symbolise
+        <p id="p-about2" class="center"> Dmesure la symbolise
           Ses possibilités
           Sont sans mesure,
           Ses transformations multiples
@@ -149,7 +221,7 @@
           Sous le masque des médias,
           Elle garde sa clarté
           Elle est pure et réservée.
-          Si on la croise alors
+          Si on la croise alors,
           On s’en souvient…</p>
 
 
@@ -160,7 +232,7 @@
       <section id="cible">
         <a href="#cible"></a>
         <h3>Notre coeur de cible</h3>
-        <p>Une femme épanouie, indépendante
+        <p id="p-about2" class="center">Une femme épanouie, indépendante
           Féminine, elle symbolise l’élégance, d’une allure naturelle et forte,
           Elle capte le regard par sa présence, son charisme,
           Elle est intuitive, imaginative, inspirante et inspirée,
@@ -171,38 +243,42 @@
       <section id="clientèle-cible">
         <a href="#clientèle-cible"></a>
         <h3>Notre clientèle cible</h3>
-        <p>Notre clientèle cible
+
+        <div class="imgst"><img src="./assets/img/hc.png" alt="clientèle" /></div>
+        <p id="p-about2" class="center">Notre clientèle cible
           Dmesure s’adresse à celles qui aspirent
           à donner une autre dimension au vêtement,
           à modeler une architecture corporelle propre,
           une identité, une créativité, une recherche.</p>
-        <div class="imgst"><img src="./assets/img/hc.png" alt="clientèle" /></div>
+        <div id="gallery">
+          <div class="imgst"><img src="./assets/img/DD.png" alt=""></div>
+        </div>
       </section>
       <div id="mots-cles">
         <a href="#mots-cles"></a>
         <h3>Mots-clés</h3>
-        <p>Fabrication française
+        <p id="p-about2" class="center"> Fabrication française
           Elégance
           Authenticité
           Plénitude</p>
-        <p>Personnalisation
+        <p id="p-about2" class="center"> Personnalisation
           Unique
           Style</p>
-        <p>Féminité
-          audace
+        <p id="p-about2" class="center"> Féminité
+          Audace
           Force
-          harmonie</p>
+          Harmonie</p>
       </div>
     </div>
     <section id="gallery">
       <a href="#gallery"></a>
       <h3>Gallery</h3>
-      <p>Chaleur/ fraicheur
+      <p id="p-about2" class="center"> Chaleur/ fraicheur
         Couleurs/ soyeux/
         Structurée/ taillée</p>
-      <p>Architecturale
-        Fluidité/
-        lumière</p>
+      <p id="p-about2" class="center"> Architecturale
+        Fluidité
+        Lumière...</p>
       <div id="cards">
         <img src="./assets/img/Architecturale.png" alt=""><img src="./assets/img/Eclosion.png" alt=""><img
           src="./assets/img/Elegance.png" alt=""><img src="./assets/img/Organique.png" alt="">
@@ -222,39 +298,50 @@
     <div id="AA"><img src="/assets/img/AA.png" alt=""></div>
     <section id="cards1">
       <h3>Inspiration et ADN</h3>
-      <div class="imgst"></div> <img src="./assets/img/C.png" alt=""> </div>
-      <div class="imgst"></div> <img src="./assets/img/E.png" alt=""> </div>
+      <div class="imgst"> <img src="./assets/img/C.png" alt=""> </div>
+      <div class="imgst"> <img src="./assets/img/E.png" alt=""> </div>
     </section>
-
-
-    <div class="grid">
-      <section id="me-contacter">
-        <a href="#me-contacter"></a>
-        <h3>Me contacter</h3>
-      </section>
-      <div class="grid-container">
-        <img src="./assets/img/fer-acajou.svg" alt="logo" />
-        <form action="">
-          <input type="text" id="firstname" placeholder="Prénom" />
-          <input type="text" id="surname" placeholder="Nom" />
-          <textarea cols="30" rows="10" placeholder="Ici votre message"></textarea>
-          <input type="submit" value="Valider" id="btn-submit" />
-        </form>
-      </div>
-    </div>
-
-
-    <div class="absolute">
-      <div><span id="circle2"></span></div>
-      <h2><span>D</span>
-        mesure</h2>
-      <span id="banner"></span><img src="./assets/img/ppdjs26.png" alt="bannière" />
-
-      <div class="imgbanner">
-        <img src="./assets/img/ppdjs16.png" alt="" />
-      </div>
-    </div>
   </main>
+  <h3>Charte <span>Graphique</span></h3>
+  <section id="charte-graphique">
+
+    <div class="imgst"> <img src="./assets/img/Charte graphique.png" alt=""> </div>
+
+  </section>
+
+  <div class="grid">
+    <section id="me-contacter">
+      <a href="#me-contacter"></a>
+      <h3>Me contacter</h3>
+    </section>
+    <div class="grid-container">
+      <img src="./assets/img/fer-acajou.svg" alt="logo" />
+      <form action="">
+        <input type="text" id="firstname" placeholder="Prénom" />
+        <input type="text" id="surname" placeholder="Nom" />
+        <textarea cols="30" rows="10" placeholder="Ici votre message"></textarea>
+        <input type="submit" value="Valider" id="btn-submit" />
+      </form>
+    </div>
+  </div>
+
+
+  <div class="absolute">
+    <div><span id="circle2"></span></div>
+    <h2><span>D</span>
+      mesure</h2>
+    <span id="banner"></span><img src="./assets/img/ppdjs26.png" alt="bannière" />
+
+    <div class="imgbanner">
+      <img src="./assets/img/ppdjs16.png" alt="" />
+    </div>
+  </div>
+  </main>
+  <div class="center-btn-footer">
+    <button id="to-top"><img src="./assets/img/arrow-up-solid.svg" alt="Arrow up">
+      <p id="p-about2" class="center">To the top</p>
+    </button>
+  </div>
   <footer>
     <div class="footer logo">
       <img src="./assets/img/ppdjs26.png" alt="logo fin" />
