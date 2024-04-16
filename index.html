@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="./assets/css/style1.css">
 
   <script src="./assets/js/script.js" defer></script>
-  <script src="./assets/js/script1.js" defer></script>
+
 </head>
 
 <body>
@@ -29,37 +29,24 @@
 
       <div class="navigation">
         <p id="home">Home</p>
-        <div id="slider-overlay" class="slider-overlay">
-          <span class="close-slider" id="close-slider">&times;</span>
-          <div id="slider">
-            <div class="prev-arrow" id="prev-arrow">&#10094;</div>
-            <img id="slider-image" class="slider-image" src="" alt="Slider Image">
-            <div class="next-arrow" id="next-arrow">&#10095;</div>
-          </div>
-          <p id="slider-text"></p>
-        </div>
-        <div class="menu-relative">
-          <ul id="menu-desktop">
-            <li>
-              <a class="home-icons" href="#h2-about">
-                <img class="home-icon" src="./assets/img/A.png" alt="Icon">About
-              </a>
-            </li>
-            <li id="gallery1">
-              <div class="home-icons">
-                <img class="home-icon" src="./assets/img/grip-solid.svg" alt="Icon">Portfolio
-                <div class="gallery1">
-                  <div id="grid2">
-                    <!-- Ajoutez vos images ici -->
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li>
-              <a class="home-icons" href="#h2-contact">
+
+        <div id="menu">
+          <ul>
+            <a class="home-icons" href="#h3-about">
+              <li>
+                <img class="home-icon" src="./assets/img/user-solid.svg" alt="Icon">About
+              </li>
+            </a>
+            <a class="home-icons" href="#h3-gallery">
+              <li>
+                <img class="home-icon" src="./assets/img/grip-solid.svg" alt="Icon">gallery
+              </li>
+            </a>
+            <a class="home-icons" href="#h3-contact">
+              <li>
                 <img class="home-icon" src="./assets/img/envelope-solid.svg" alt="Icon">Contact
-              </a>
-            </li>
+              </li>
+            </a>
           </ul>
         </div>
         <div id="menu">
@@ -85,13 +72,14 @@
             <li class="deroulant">
               <a href="#story-telling">Story telling &ensp;</a>
               <ul class="sous">
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#croquis">Croquis</a></li>
+                <li>
+                  <a href="#gallery">Gallery</a>
+                </li>
               </ul>
             </li>
           </ul>
         </div>
-        <img id="search" src="./assets/img/magnifying-glass-solid.svg" alt="Search">
+
         <img id="menuburger" src="./assets/img/bars-solid.svg" alt="Menu Burger">
       </div>
     </nav>
@@ -130,35 +118,52 @@
 
 
   <main>
+    <div class="container">
 
-    <div id="polly">
-      <div class="imgst"> <img src="./assets/css/pollymagoo.svg" alt=""></div>
+
+      <div id="polly">
+        <img src="./assets/css/pollymagoo.svg" alt="">
+      </div>
+      <div id="polly1">
+        <img src="./assets/css/pollymagoo.svg" alt="">
+      </div>
+      <div id="polly2">
+        <img src="./assets/css/pollymagoo.svg" alt="">
+      </div>
+      <div id="polly3">
+        <img src="./assets/css/pollymagoo.svg" alt="">
+      </div>
+
     </div>
-
-
     <!-- Votre contenu principal -->
     <div class="flexbox">
       <!-- Contenu de votre flexbox -->
       <h3>Le tailleur Femme / Mesure</h3>
-      <div><img src="./assets/css/TFSMDM.png" alt="image intro"></div>
+      <div id="TFSMDM"><img src="./assets/css/TFSMDM.png" alt="image intro"></div>
       <section id="story-telling">
         <a href="#story-telling"></a>
 
-        <h2 id="h2-about" class="center">ABOUT ME</h2>
+
+        <h3 id="h3-about" class="center">ABOUT </h3>
         <p id="p-about" class="center">&infin; Story telling</p>
 
         <div class="imgst">
           <div class="content">
             <img src="./assets/img/processus.png" alt="processus" />
-            <p id="p-about2" class="center"><i> "J'ai choisi le symbole &infin; de l'infini, car les mathématiques sont
-                importantes dans ma vie, paradoxalement et profondément liées, parallèles à ma passion du vêtement. La
-                création est à l'infini. En effet, point de création sans construction, sans code, ou sans calcul.
-                Passionnée par les mathématiques, je tentais d’abord d'intégrer, tour à tour les beaux arts, puis
-                l'école supérieure de l'architecture; je voulais créer au quotidien, sans m'enfermer, quelque chose de
-                plaisant et de personnel sans m'enfermer. Un style, créer un style de vêtements. Mon choix fût
-                instantanément celui du tailleur pour femme, pas juste le smoking, le tailleur sous toutes ses coupes et
-                ses formes. Valorisant, il est aussi le plus unisexe, parfaitement porté et par la femme et par l'homme,
-                en toute complémentarité. J'avais besoin de création et de construction, ma logique est respectée."</i>
+            <p id="p-about2" class="center"> "J'ai choisi le symbole &infin; de l'infini, car les mathématiques sont
+              importantes dans ma vie,
+              paradoxalement et profondément liées, parallèles à ma passion du vêtement. <br>
+              La création est à l'infini. En effet, point de création sans construction, sans code, ou sans calcul. <br>
+              Passionnée par les mathématiques, je tentais d’abord d'intégrer, tour à tour les beaux arts,
+              puis l'école supérieure de l'architecture; je voulais créer au quotidien,
+              quelque chose de plaisant et de personnel sans m'enfermer. <br>
+              Un style, créer un style de vêtements. <br>
+              Mon choix fût instantanément celui du tailleur pour femme, pas juste le smoking, le tailleur sous toutes
+              ses coupes, toutes ses formes. <br>
+              Valorisant, il est aussi le plus unisexe, parfaitement porté et par la femme et par l'homme, en toute
+              complémentarité. <br>
+              J'avais besoin de création et de construction,
+              ma logique est respectée."
             </p>
           </div>
         </div>
@@ -178,18 +183,18 @@
         <h3>Typologie produits</h3>
 
         <p id="p-about2" class="center"> Dmesure proposera à sa clientèle féminine,
-          une gamme de tailleurs sous toutes ses formes,
-          à leur juste mesure,
-          personnalisé sur demande et
-          en collaboration complète avec la styliste.
-          De fabrication 100 % française,
-          en partenariat avec des artisans
-          au savoir –faire reconnus,
-          traditionnels, modernistes, créateurs.
+          une gamme de tailleurs sous toutes ses formes, <br>
+          à leur juste mesure,personnalisé sur demande et en collaboration complète avec la styliste. <br>
+
+
+          De fabrication 100 % française, en partenariat avec des artisans <br>
+
+          au savoir –faire reconnus,traditionnels, modernistes, créateurs. <br>
+
 
           Les tissus de laine peignée, pure ou mélangée,
-          soie, dentelle, velours, Un éventail de possibilité,
-          de quoi satisfaire et rendre la création,
+          soie, dentelle, velours, <br>Un éventail de possibilité,
+          de quoi satisfaire et rendre la création, <br>
           unique à son image, du moment ou intemporelle,
           selon ses désirs.</p>
         <div class="imgst"><img src="./assets/img/fabrication Fr.png" alt="produits" /></div>
@@ -201,116 +206,127 @@
         </div>
         <p id="p-about2" class="center"> Une écoute : votre créativité
           Made in France : une garantie qualité,
-          des produits conçus et confectionnés dans notre atelier.
+          des produits conçus et confectionnés dans notre atelier. <br>
           Une collaboration avec des fournisseurs basés en Italie ou en Angleterre.</p>
       </section>
       <section id="persona">
         <a href="#persona"></a>
         <h3><span>D</span> mesure <br /> Notre persona</h3>
         <div class="imgst"> <img src="./assets/img/dietrich.png" alt="M Dietrich" /> </div>
-        <p id="p-about2" class="center"> Dmesure la symbolise
-          Ses possibilités
-          Sont sans mesure,
-          Ses transformations multiples
-          Son image, jamais diffuse
-          elle évolue sans cesse,
-          Passe du volume d’excentricité
-          A la force de la sagesse
-          Artiste en affaires
-          D’un naturel confondant
-          Sous le masque des médias,
-          Elle garde sa clarté
-          Elle est pure et réservée.
-          Si on la croise alors,
+        <p id="p-about2" class="center"> Dmesure la symbolise <br>
+          Ses possibilités <br>
+          Sont sans mesure, <br>
+          Ses transformations multiples <br>
+          Son image, jamais diffuse <br>
+          elle évolue sans cesse, <br>
+          Passe du volume d’excentricité <br>
+          A la force de la sagesse <br>
+          Artiste en affaires <br>
+          D’un naturel confondant <br>
+          Sous le masque des médias, <br>
+          Elle garde sa clarté <br>
+          Elle est pure et réservée. <br>
+          Si on la croise alors, <br>
           On s’en souvient…</p>
 
 
       </section>
-      <section id="ldg">
-        <div class="imgst"> <img src="./assets/img/ppdjs33.png" alt="portrait lady gaga" /></div>
-      </section>
+
       <section id="cible">
         <a href="#cible"></a>
         <h3>Notre coeur de cible</h3>
-        <p id="p-about2" class="center">Une femme épanouie, indépendante
-          Féminine, elle symbolise l’élégance, d’une allure naturelle et forte,
-          Elle capte le regard par sa présence, son charisme,
-          Elle est intuitive, imaginative, inspirante et inspirée,
+        <p id="p-about2" class="center">Une femme épanouie, indépendante. <br>
+          Féminine, elle symbolise l’élégance, d’une allure naturelle et forte, <br>
+          Elle capte le regard par sa présence, son charisme, <br>
+          Elle est intuitive, imaginative, inspirante et inspirée, <br>
           Elle porte son énergie créatrice, sans limite.</p>
         <div class="imgst"> <img src="./assets/img/Talons.png" alt="imagecible " /> </div>
       </section>
-      <img src="./assets/img/ppdjs26.png" alt="#logo" />
-      <section id="clientèle-cible">
-        <a href="#clientèle-cible"></a>
-        <h3>Notre clientèle cible</h3>
-
-        <div class="imgst"><img src="./assets/img/hc.png" alt="clientèle" /></div>
-        <p id="p-about2" class="center">Notre clientèle cible
-          Dmesure s’adresse à celles qui aspirent
-          à donner une autre dimension au vêtement,
-          à modeler une architecture corporelle propre,
-          une identité, une créativité, une recherche.</p>
-        <div id="gallery">
-          <div class="imgst"><img src="./assets/img/DD.png" alt=""></div>
-        </div>
+      <div id="ppdjs26">
+        <img src="./assets/img/ppdjs26.png" alt="#logo" />
+        <section id="clientèle-cible">
+          <a href="#clientèle-cible"></a>
+          <h3>Notre clientèle cible</h3>
+      </div>
+      <div class="imgst"><img src="./assets/img/hc.png" alt="clientèle" /></div>
+      <p id="p-about2" class="center">Notre clientèle cible <br>
+        Dmesure s’adresse à celles qui aspirent <br>
+        à donner une autre dimension au vêtement, <br>
+        à modeler une architecture corporelle propre, <br>
+        une identité, une créativité, une recherche.</p>
+      <div id="gallery">
+        <div class="imgst"><img src="./assets/img/DD.png" alt=""></div>
+      </div>
       </section>
       <div id="mots-cles">
         <a href="#mots-cles"></a>
         <h3>Mots-clés</h3>
-        <p id="p-about2" class="center"> Fabrication française
+        <p id="p-about2" class="center"> Fabrication française <br>
           Elégance
           Authenticité
           Plénitude</p>
-        <p id="p-about2" class="center"> Personnalisation
+        <p id="p-about2" class="center"> Personnalisation <br>
           Unique
           Style</p>
-        <p id="p-about2" class="center"> Féminité
+        <p id="p-about2" class="center"> Féminité <br>
           Audace
           Force
           Harmonie</p>
       </div>
     </div>
-    <section id="gallery">
-      <a href="#gallery"></a>
-      <h3>Gallery</h3>
-      <p id="p-about2" class="center"> Chaleur/ fraicheur
-        Couleurs/ soyeux/
-        Structurée/ taillée</p>
-      <p id="p-about2" class="center"> Architecturale
-        Fluidité
-        Lumière...</p>
-      <div id="cards">
-        <img src="./assets/img/Architecturale.png" alt=""><img src="./assets/img/Eclosion.png" alt=""><img
-          src="./assets/img/Elegance.png" alt=""><img src="./assets/img/Organique.png" alt="">
-      </div>
-    </section>
-    <section id="croquis">
-      <a href="#croquis"></a>
-      <div id="CC">
-        <h3>Croquis</h3><img src="/assets/img/CC.png" alt="">
-      </div>
-    </section>
-    <section class="croquis-section">
-      <div class="croquis-container">
-        <!-- Les balises img seront générées dynamiquement par JavaScript -->
-      </div>
-    </section>
-    <div id="AA"><img src="/assets/img/AA.png" alt=""></div>
-    <section id="cards1">
-      <h3>Inspiration et ADN</h3>
-      <div class="imgst"> <img src="./assets/img/C.png" alt=""> </div>
-      <div class="imgst"> <img src="./assets/img/E.png" alt=""> </div>
-    </section>
+    <section>
+      <h3 id="h3-gallery" class="center">Gallery</h3>
+      <section id="gallery">
+        <div class="center">
+          <p class="p-about2"> Chaleur/ fraicheur <br>
+            Couleurs/ soyeux <br>
+            <img src="./assets/img/Eclosion.png" alt="Eclosion">
+            Structurée/ taillée
+          </p>
+          <p class="p-about2"> Architecturale <br>
+            <img src="/assets/img/Architecturale.png" alt="">
+            Fluidité <br>
+            <img src="./assets/img/Elegance.png" alt="Elegance">
+            Lumière... <br>
+            <img src="./assets/img/Organique.png" alt="Organique">
+          </p>
+        </div>
+      </section>
+
+
+      <section id="croquis">
+        <a href="#croquis"></a>
+        <div id="CC">
+          <h3>Croquis</h3>
+          <img src="./assets/img/croquis.png" alt="">
+          <h3>Inspiration et ADN</h3>
+        </div>
+      </section>
+      <section class="croquis-section">
+        <div class="croquis-container">
+          <!-- Les balises img seront générées dynamiquement par JavaScript -->
+        </div>
+      </section>
+
   </main>
   <h3>Charte <span>Graphique</span></h3>
-  <section id="charte-graphique">
+  <div id="charte-graphique">
 
-    <div class="imgst"> <img src="./assets/img/Charte graphique.png" alt=""> </div>
+    <img src="./assets/img/Charte graphique.png" alt="">
 
-  </section>
+  </div>
+  <div class="center-btn-contact">
+    <button id="to-top"><img src="./assets/img/arrow-up-solid.svg" alt="Arrow up"
+        style="width: 15px; margin-right: 10px"> To the top</p></button>
+
+
+    </button>
+  </div>
 
   <div class="grid">
     <section id="me-contacter">
+      <h3 id="h3-contact" class="center"></h3>
+
       <a href="#me-contacter"></a>
       <h3>Me contacter</h3>
     </section>
@@ -328,8 +344,8 @@
 
   <div class="absolute">
     <div><span id="circle2"></span></div>
-    <h2><span>D</span>
-      mesure</h2>
+    <h3><span>D</span>
+      Mesure</h3>
     <span id="banner"></span><img src="./assets/img/ppdjs26.png" alt="bannière" />
 
     <div class="imgbanner">
@@ -337,40 +353,35 @@
     </div>
   </div>
   </main>
-  <div class="center-btn-footer">
-    <button id="to-top"><img src="./assets/img/arrow-up-solid.svg" alt="Arrow up">
-      <p id="p-about2" class="center">To the top</p>
-    </button>
-  </div>
+
   <footer>
+
     <div class="footer logo">
       <img src="./assets/img/ppdjs26.png" alt="logo fin" />
 
     </div>
-    <div id="BB">
-      <img src="/assets/img/BB.png" alt="">
+ 
+    <div class="footer-icons">
+      <a href="https://www.facebook.com" target="_blank">
+        <img src="./assets/img/square-facebook.svg" alt="Facebook"></a>
+      <a href="https://www.instagram.com" target="_blank">
+        <img src="/assets/img/instagram.svg" alt="Instagram"></a>
+      <a href="https://www.snapchat.com" target="_blank">
+        <img src="./assets/img/square-snapchat.svg" alt="Snapchat"></a>
+      <a href="https://www.pinterest.com" target="_blank">
+        <img src="./assets/img/pinterest-p.svg" alt="Pinterest"></a>
+      <a href="https://www.twitter.com" target="_blank">
+        <img src="./assets/img/twitter.svg" alt="Twitter"></a>
+      <a href="https://www.linkedin.com" target="_blank">
+        <img src="./assets/img/linkedin-in.svg" alt="Linkedin"></a>
+      <i class="fas fa-copyright">
+        Djamila Sanson
+      </i>
     </div>
+
   </footer>
 
-  <section id="fin">
 
-
-    <div class="social">
-      <a href="#" class="social-icon">
-        <i class="fab fa-facebook-f"></i>
-      </a>
-      <a href="#" class="social-icon">
-        <i class="fab fa-twitter"></i>
-      </a>
-      <a href="#" class="social-icon">
-        <i class="fab fa-instagram"></i>
-      </a>
-
-    </div>
-  </section>
-  <i class="fas fa-copyright">
-    <h3>Djamila Sanson</h3>
-  </i>
 
 </body>
 

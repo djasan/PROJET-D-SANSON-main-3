@@ -20,7 +20,7 @@
     font-family: 'roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: bisque;
+    background-color: rgba(255, 228, 196, 0.345);
   }
   
   #slider {
@@ -43,40 +43,9 @@
     background-color: rgba(0, 0, 0, 0.9);
   }
   
-  .prev-arrow,
-  .next-arrow {
-    font-size: 2em;
-    color: white;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    cursor: pointer;
-  }
-  
-  .prev-arrow {
-    left: 20px;
-  }
-  
-  .next-arrow {
-    right: 20px;
-  }
-  
-  .slider-image {
-    max-width: 80%;
-    margin: auto;
-    display: block;
-  }
-  
-  .close-slider {
-    color: white;
-    font-size: 2em;
-    position: absolute;
-    top: 40px;
-    right: 20px;
-    z-index: 100;
-    cursor: pointer;
-  }
-  
+ 
+ 
+ 
   img {
     width: 100%;
     vertical-align: bottom;
@@ -150,11 +119,7 @@
     text-align: center;
   }
   
-  #search {
-    display: none;
-    cursor: pointer;
-  }
-  
+ 
   #menu li {
     margin: 20px;
     padding: 10px 0px;
@@ -182,19 +147,7 @@
     letter-spacing: 10px;
   }
   
-  .home-icon {
-    width: 20px;
-    margin-right: 10px;
-  }
   
-  .home-icons {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    text-decoration: none;
-    cursor: pointer;
-  }
   
   .center {
     text-align: center;
@@ -257,34 +210,6 @@
     margin-bottom: 3rem;
   }
   
-  .skills {
-    margin-left: 3%;
-  }
-  
-  .skill-text {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-  
-  .skill-text p {
-    margin-left: 10px;
-    font-size: 1rem;
-    letter-spacing: 9px;
-  }
-  
-  .logo-skill {
-    width: 20px;
-    margin-right: 10px;
-    margin-left: 5px;
-  }
-  
-  .skill-bar {
-    width: 100%;
-    height: 35px;
-    background-color: rgba(209, 209, 209, 0.801);
-    margin-bottom: 2rem;
-  }
   
   #bar1 {
     position: relative;
@@ -293,18 +218,7 @@
     height: 38px;
   }
   
-  #grid2 {
-    display: grid;
-    position: absolute;
-    top: 5.3vh;
-    height: 0vh;
-    overflow: hidden;
-    grid-template-columns: 4fr 4fr 4fr 4fr;
-    width: 40%;
-    background-color: rgb(211, 211, 211);
-    border-radius: 8px;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
-  }
+
   
   .grid2-show {
     padding: 10px !important;
@@ -378,17 +292,6 @@
     position: relative;
   }
   
-  #p-paralax2,
-  #p-paralax3 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 1.5rem;
-    font-size: 2.2rem;
-    letter-spacing: 10px;
-  }
   
   #h2-My-Work {
     font-size: 2rem;
@@ -682,12 +585,7 @@
       max-width: 60%
     }
   
-    #search {
-      display: block;
-      width: 20px;
-      position: absolute;
-      right: 2%;
-    }
+   
   }
   
   @media screen and (min-width: 1201px) {

@@ -19,66 +19,14 @@ html {
 
 body {
   font-family: 'roboto', sans-serif;
-  background-color: #ac0d42;
+  background-color: antiquewhite;
   margin: 0;
   padding: 0;
   /* VH = 100% de la taille de l'écran (viewport height) */
   /* min-height: 100vh; */
 }
 
-#slider {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  user-select: none;
-}
 
-.slider-overlay {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 100;
-  background-color: rgba(0, 0, 0, 0.9);
-}
-
-.prev-arrow,
-.next-arrow {
-  font-size: 2em;
-  color: white;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  cursor: pointer;
-}
-
-.prev-arrow {
-  left: 20px;
-}
-
-.next-arrow {
-  right: 20px;
-}
-
-.slider-image {
-  max-width: 80%;
-  margin: auto;
-  display: block;
-}
-
-.close-slider {
-  color: white;
-  font-size: 2em;
-  position: absolute;
-  top: 40px;
-  right: 20px;
-  z-index: 100;
-  cursor: pointer;
-}
 
 img {
   width: 100%;
@@ -86,9 +34,14 @@ img {
 }
 
 .navigation.scrolled {
-  background-color: #fff;
+  background-color: #1d19192a;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.178);
+  border-bottom: 1px solid rgb(0, 0, 0);
+}
+
+#gallery img {
+  color: #2a2e2d;
+  z-index: 20;
 }
 
 #home {
@@ -97,7 +50,14 @@ img {
   font-size: 1.5rem;
 }
 
+#about {
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.493);
+  font-size: 1rem;
+}
+
 .navigation {
+
   display: flex;
   justify-content: space-between;
   position: fixed;
@@ -153,13 +113,10 @@ body.menu-open {
   text-align: center;
 }
 
-#search {
-  display: none;
-  cursor: pointer;
-}
+
 
 #menu .sous {
-  background-color: teal;
+  background-color: rgba(0, 128, 128, 0.694);
 }
 
 #menu>ul>li {
@@ -181,7 +138,7 @@ body.menu-open {
 
 #h1-home {
   font-size: 1.4rem;
-  color: white;
+
   position: absolute;
   top: 50%;
   left: 50%;
@@ -193,12 +150,90 @@ body.menu-open {
   letter-spacing: 10px;
 }
 
+
+
+nav {
+  width: 100%;
+  margin: 0 auto;
+  background-color: teal;
+  position: sticky;
+  top: 0px;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+nav ul li {
+  float: left;
+  width: 25%;
+  text-align: center;
+  position: relative;
+}
+
+nav ul::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+nav a {
+  display: block;
+  text-decoration: none;
+  color: antiquewhite;
+  border-bottom: 2px solid transparent;
+  padding: 8px;
+
+}
+
+nav a:hover {
+  color: orange;
+  border-bottom: 2px solid orange;
+  ;
+}
+
+.sous {
+  display: none;
+
+  padding: 8px;
+  box-shadow: 0px 1px 2px #914646;
+  background-color: teal;
+  position: absolute;
+  width: 100%;
+  z-index: 1000;
+
+}
+
+nav>ul li:hover .sous {
+  display: block;
+}
+
+.sous li {
+  float: none;
+  width: 100%;
+  text-align: center;
+}
+
+.sous a {
+  margin: 10px;
+  padding: 10px;
+  border-bottom: none;
+}
+
+.sous a:hover {
+  border-bottom: none;
+  background-color: RGBa(200, 200, 200, 0.1);
+}
+
+
+
 .home-icon {
   width: 20px;
   margin-right: 10px;
 }
 
 .home-icons {
+  color: teal;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -209,17 +244,21 @@ body.menu-open {
 
 .center {
   text-align: center;
-  color: rgba(0, 0, 0, 0.493);
+  color: rgba(0, 0, 0, 0.973);
 }
 
-#h2-about {
-  font-size: 1.8rem;
+#h3-about {
+  color: antiquewhite;
+  font-family: 'roboto'sans-serif;
+  font-size: 1.5rem;
   margin: 3rem 0px 1rem 0px;
   font-weight: 400;
   letter-spacing: 1px;
 }
-
-.about-me {
+#h3-gallery{
+  color: antiquewhite;
+}
+.about {
   display: none;
 }
 
@@ -238,47 +277,38 @@ body.menu-open {
   font-size: 1.1rem;
 }
 
+.content p {
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
 #p-about2 {
-  font-size: 1.1rem;
+  color: black;
+  font-weight: 300;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
   margin: 10px;
   line-height: 1.8rem;
 }
 
-#h3-work {
+h3 {
   font-size: 1.2rem;
   margin: 3rem 0px 1rem 0px;
   font-weight: 400;
   margin-bottom: 3rem;
 }
 
-.skills {
-  margin-left: 3%;
+#DD {
+  border: 5px solid black;
+  padding: 10px;
+  margin: 10px;
 }
 
-.skill-text {
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
-}
 
-.skill-text p {
-  margin-left: 10px;
-  font-size: 1rem;
-  letter-spacing: 9px;
-}
 
-.logo-skill {
-  width: 20px;
-  margin-right: 10px;
-  margin-left: 5px;
-}
 
-.skill-bar {
-  width: 100%;
-  height: 35px;
-  background-color: rgba(209, 209, 209, 0.801);
-  margin-bottom: 2rem;
-}
 
 #bar1 {
   position: relative;
@@ -287,18 +317,7 @@ body.menu-open {
   height: 38px;
 }
 
-#grid2 {
-  display: grid;
-  position: absolute;
-  top: 5.3vh;
-  height: 0vh;
-  overflow: hidden;
-  grid-template-columns: 4fr 4fr 4fr 4fr;
-  width: 40%;
-  background-color: rgb(211, 211, 211);
-  border-radius: 8px;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
-}
+
 
 .grid2-show {
   padding: 10px !important;
@@ -392,7 +411,7 @@ h2 {
 .flexbox,
 .grid,
 .absolute {
-  border: 2px solid rgb(14, 52, 66);
+  border: 5px solid antiquewhite(14, 52, 66);
   border-radius: 10px;
   padding: 10px;
   margin-top: 20px;
@@ -414,45 +433,107 @@ img {
   border-radius: 10px;
 }
 
-#polly {
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* Deux colonnes de largeur égale */
+  gap: 20px;
+  /* Espace entre les éléments */
+  justify-content: center;
+  /* Centrer les éléments horizontalement */
+}
+
+#polly,
+#polly1,
+#polly2,
+#polly3 {
+  box-shadow: 0px 0px 20px 4px #2a2e2d;
   border: 5px solid black;
   max-width: 100%;
+
+  padding: 20px;
+  /* Ajouter un peu de marge à l'intérieur des éléments */
+}
+
+#polly {
+  border: 5px solid antiquewhite;
+
   margin-left: 30%;
   margin-right: 30%;
   background-color: hwb(0 7% 45% / 0.979);
 }
 
+#polly1 {
+  border: 5px solid black;
+
+  margin-left: 30%;
+  margin-right: 30%;
+  background-color: teal;
+}
+
+#polly2 {
+  border: 5px solid black;
+
+  margin-left: 30%;
+  margin-right: 30%;
+  background-color: rgb(146, 146, 13);
+}
+
+#polly3 {
+  border: 5px solid antiquewhite;
+
+  margin-left: 30%;
+  margin-right: 30%;
+  background-color: grey;
+}
+
 #story-telling .imgst img {
   display: block;
-  width: 20%; /* Ajustez la largeur selon vos besoins */
-  margin: 0 auto; /* Cela centrera l'image horizontalement à l'intérieur de son conteneur */
+  width: 20%;
+  /* Ajustez la largeur selon vos besoins */
+  margin: 0 auto;
+  /* Cela centrera l'image horizontalement à l'intérieur de son conteneur */
 }
 
-#p-about2{
-  white-space: pre-line; /* Conserve les sauts de ligne */
- 
+
+
+#TFSMDM {
+  width: 70%;
+  /* Ajustez la largeur selon vos besoins */
+  margin: 5px;
+  margin-left: 15%;
+  margin-right: 10%;
 }
 
-#charte-graphique{
-  width: 20%; /* Ajustez la largeur selon vos besoins */
-  margin:5px ;
+#ppdjs26 {
+  margin: 10px;
+
+}
+
+#charte-graphique {
+  width: 20%;
+  /* Ajustez la largeur selon vos besoins */
+  margin: 5px;
   margin-left: 40%;
   margin-right: 30%;
 
 
 }
+
 /* Styles spécifiques pour le texte */
 #story-telling .imgst p {
   flex: 1;
   /* Le texte prendra tout l'espace disponible à droite de l'image */
-  padding-left: 20px;
+  padding-left: 44px;
+  padding-right: 24px;
   /* Ajout d'un espace à gauche du texte */
   text-align: justify;
   /* Justifie le texte */
+  
   font-weight: 300;
   font-size: 16px;
-  font-family: 'roboto'sans-serif;
-  color:black;
+  font-family: 'roboto' sans-serif;
+  color: black;
 }
 
 
@@ -468,26 +549,38 @@ img {
 
 
 #customise .imgst img {
+  margin-top: 10px;
   max-width: 20%;
   margin-left: 40%;
   margin-right: 50%;
 }
 
 #persona .imgst img {
+  margin-top: 10px;
   max-width: 20%;
   margin-left: 40%;
 }
 
-#cible .imgst img {
+.imgst img {
+  margin-top: 10px;
+  margin-left: 300px;
   max-width: 20%;
 }
 
-#gallery img {
-  max-width: 60%;
-
+.croquis-image {
+  box-shadow: 0px 0px 20px 4px #2a2e2d;
+  width: 100%;
+  /* Définissez la largeur souhaitée */
+  height: 100%;
+  /* Laissez la hauteur s'ajuster automatiquement pour conserver les proportions de l'image */
+  margin: 5px;
+  /* Ajoutez une marge entre les images si nécessaire */
 }
 
+
+
 #ldg .imgst img {
+  margin-top: 10px;
   max-width: 60%;
   margin-left: 20%;
 
@@ -532,6 +625,7 @@ img {
 
 /* GRID */
 .grid-container {
+  box-shadow: 0px 0px 20px 4px #2a2e2d;
   display: grid;
   grid-template-columns: 30% 70%;
 }
@@ -554,11 +648,12 @@ form {
 
 input,
 textarea {
+  box-shadow: 0px 0px 20px 4px #2a2e2d;
   margin: 5px;
-  border: 1px solid darkblue;
+  border: 1px solid bisque;
   padding: 10px;
   font-size: 1.1rem;
-  font-family: 'Abyssinica SIL', serif;
+  font-family: 'roboto'sans-serif;
 
   border-radius: 5px;
 }
@@ -625,32 +720,7 @@ textarea {
 }
 
 
-#CC {
-  max-width: 50%;
-  display: block;
-  /* Assurez-vous que l'image est affichée en tant que bloc pour pouvoir appliquer margin:auto */
-  margin: auto;
-  /* Centre l'image horizontalement */
-}
 
-#AA {
-
-  max-width: 50%;
-  display: block;
-  /* Assurez-vous que l'image est affichée en tant que bloc pour pouvoir appliquer margin:auto */
-  margin: auto;
-  /* Centre l'image horizontalement */
-}
-
-#BB {
-
-  max-width: 50%;
-  display: block;
-  /* Assurez-vous que l'image est affichée en tant que bloc pour pouvoir appliquer margin:auto */
-  margin: auto;
-  /* Centre l'image horizontalement */
-
-}
 
 #fin {
   display: flex;
@@ -677,6 +747,66 @@ textarea {
 
 }
 
+.arrow {
+  margin-right: 10px;
+  width: 15px;
+}
+
+#to-top {
+  width: 30%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+ background-color: rgba(0, 128, 128, 0.503);
+ 
+}
+
+#to-top img {
+
+  width: 15px;
+  margin-right: 10px;
+}
+#to-top p{
+  color: antiquewhite;
+}
+.center-btn-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 0.5rem;
+}
+
+.center-btn-contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 0.5rem;
+}
+
+.footer-icons {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  margin: 0px 10px;
+  margin-top: 2rem;
+}
+
+footer {
+  background-color: #2a2e2d;
+}
+
+
+
+.footer-icons img {
+  width: 25px;
+  margin-right: 8px;
+  cursor: pointer;
+}
+
 .fas {
   display: flex;
   align-items: center;
@@ -689,86 +819,6 @@ textarea {
   font-family: 'roboto', sans-serif;
   font-size: 1rem;
   margin-right: 10px;
-}
-
-
-
-nav {
-  width: 100%;
-  margin: 0 auto;
-  background-color: teal;
-  position: sticky;
-  top: 0px;
-}
-
-nav ul {
-  list-style-type: none;
-}
-
-nav ul li {
-  float: left;
-  width: 25%;
-  text-align: center;
-  position: relative;
-}
-
-nav ul::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-nav a {
-  display: block;
-  text-decoration: none;
-  color: antiquewhite;
-  border-bottom: 2px solid transparent;
-  padding: 8px;
-
-}
-
-nav a:hover {
-  color: orange;
-  border-bottom: 2px solid orange;
-  ;
-}
-
-.sous {
-  display: none;
- 
-  padding: 8px;
-  box-shadow: 0px 1px 2px #914646;
-  background-color: teal;
-  position: absolute;
-  width: 100%;
-  z-index: 1000;
-
-}
-
-nav>ul li:hover .sous {
-  display: block;
-}
-
-.sous li {
-  float: none;
-  width: 100%;
-  text-align: left;
-}
-
-.sous a {
-  margin: 10px;
-  padding: 10px;
-  border-bottom: none;
-}
-
-.sous a:hover {
-  border-bottom: none;
-  background-color: RGBa(200, 200, 200, 0.1);
-}
-
-.deroulant>a::after {
-  content: " ▼";
-  font-size: 12px;
 }
 
 
