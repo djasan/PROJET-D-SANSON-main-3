@@ -249,15 +249,17 @@ nav>ul li:hover .sous {
 
 #h3-about {
   color: antiquewhite;
-  font-family: 'roboto'sans-serif;
+  font-family: 'roboto' sans-serif;
   font-size: 1.5rem;
   margin: 3rem 0px 1rem 0px;
   font-weight: 400;
   letter-spacing: 1px;
 }
-#h3-gallery{
+
+#h3-gallery {
   color: antiquewhite;
 }
+
 .about {
   display: none;
 }
@@ -498,7 +500,7 @@ img {
 
 
 #TFSMDM {
-  background-color:bisque;
+  background-color: bisque;
   width: 70%;
   /* Ajustez la largeur selon vos besoins */
   margin: 5px;
@@ -530,7 +532,7 @@ img {
   /* Ajout d'un espace à gauche du texte */
   text-align: justify;
   /* Justifie le texte */
-  
+
   font-weight: 300;
   font-size: 16px;
   font-family: 'roboto' sans-serif;
@@ -654,7 +656,7 @@ textarea {
   border: 1px solid bisque;
   padding: 10px;
   font-size: 1.1rem;
-  font-family: 'roboto'sans-serif;
+  font-family: 'roboto' sans-serif;
 
   border-radius: 5px;
 }
@@ -760,8 +762,8 @@ textarea {
   align-items: center;
   justify-content: center;
   padding: 10px;
- background-color: rgba(0, 128, 128, 0.503);
- 
+  background-color: rgba(0, 128, 128, 0.503);
+
 }
 
 #to-top img {
@@ -769,9 +771,11 @@ textarea {
   width: 15px;
   margin-right: 10px;
 }
-#to-top p{
+
+#to-top p {
   color: antiquewhite;
 }
+
 .center-btn-footer {
   display: flex;
   justify-content: center;
@@ -821,6 +825,66 @@ footer {
   font-size: 1rem;
   margin-right: 10px;
 }
+/* Styles pour le desktop */
+.suggestions-section,
+.legal-section {
+  margin-bottom: 30px;
+}
+
+.suggestions-section h3,
+.legal-section h3 {
+  font-family: 'Roboto', sans-serif; /* Utilisation correcte de la police de caractères */
+  text-align: center;
+  font-size: 18px;
+  color: antiquewhite;
+}
+
+.suggestions-section p,
+.legal-section p {
+  font-family: 'Roboto', sans-serif; /* Utilisation correcte de la police de caractères */
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 16px;
+  color: antiquewhite;
+}
+
+.rating-stars {
+  display: flex;
+  justify-content: center;
+  align-items: baseline; /* alignement vertical des étoiles */
+  margin-top: 5px; /* réduction de la marge supérieure */
+}
+
+.star-icon {
+  font-size: 24px;
+  color: #FFD700; /* couleur des étoiles sélectionnées */
+}
+
+/* Styles pour le responsive */
+@media only screen and (max-width: 768px) {
+  .suggestions-section,
+  .legal-section {
+    text-align: center;
+  }
+
+  .suggestions-section h3,
+  .legal-section h3 {
+    font-size: 16px;
+  }
+
+  .suggestions-section p,
+  .legal-section p {
+    font-size: 12px;
+    color: antiquewhite; /* couleur du texte pour le responsive */
+  }
+
+  .rating-stars {
+    align-items: baseline; /* alignement vertical des étoiles */
+    margin-top: 5px; /* réduction de la marge supérieure */
+  }
+}
+
+
 
 
 
