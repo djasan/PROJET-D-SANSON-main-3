@@ -86,3 +86,4 @@ liElement.addEventListener("mouseleave", () => {
     }, 400);
 });
 
+console.log(document.querySelector("link[rel='icon']").href);
